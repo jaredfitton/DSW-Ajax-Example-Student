@@ -9,5 +9,10 @@ app.debug = True #Change this to False for production
 def home():
     return render_template('home.html')
 
+@app.route('/update_div1', methods=['POST'])
+def update():
+    print(request.form)
+    return Markup('<p>This text was sent from the server</p>')
+
 if __name__ == '__main__':
     app.run()
