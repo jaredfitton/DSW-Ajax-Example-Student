@@ -11,7 +11,7 @@ def home():
 
 @app.route('/update_div1', methods=['POST'])
 def update():
-    print(request.form)
+    print((request.form)['clientMessage'])
     return Markup('<p>This text was sent from the server</p>')
 
 if __name__ == '__main__':
